@@ -13,5 +13,5 @@ disabled = true
 
 [time]
 disabled = false
-format = "[$time]($style) "
+format = "[$time]($style)"
 utc_time_offset = "-7" #los angeles
