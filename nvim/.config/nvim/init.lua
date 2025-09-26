@@ -55,11 +55,11 @@ vim.o.cursorline = true
 vim.o.scrolloff = 10
 
 -- Use spaces instead of tabs
-vim.o.expandtab = true
+-- vim.o.expandtab = true
 
 -- use two spaces for a tab
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
+-- vim.o.tabstop = 2
+-- vim.o.shiftwidth = 2
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -108,7 +108,6 @@ rtp:prepend(lazypath)
 require('lazy').setup({
 
   { import = 'plugins' },
-
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
