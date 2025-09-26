@@ -33,5 +33,13 @@ return {
         python = { "isort", "black" },
         javascript = { "prettierd", "prettier", stop_after_first = true },
       },
+      -- here becasue CD has old GLIBC and we need to point to nix version of stylua
+      formatters = {
+        stylua = {
+          command = vim.fn.exepath("stylua"),
+          args = { "--search-parent-directories", "-"},
+          stdin = true,
+        },
+      },
     },
   }
