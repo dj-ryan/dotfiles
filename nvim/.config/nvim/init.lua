@@ -105,34 +105,6 @@ rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
 require('lazy').setup({
-  -- plug
-
-  -- plug
-
-  -- plug
-
-  -- plug
-
-  -- plug
-
-  -- plug
-
-  -- plug
-
-  -- plug
-
-  -- plug
-
-  -- plug
-
-  -- plug
-
-  -- require 'plugins.debug',
-  -- require 'plugins.indent_line',
-  -- require 'plugins.lint',
-  -- require 'plugins.autopairs',
-  -- require 'plugins.neo-tree',
-  -- require 'plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   { import = 'plugins' },
 
