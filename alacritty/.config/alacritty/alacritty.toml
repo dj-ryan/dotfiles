@@ -5,13 +5,41 @@ live_config_reload = true
 opacity = 0.9
 # blur = true
 
+[scrolling]
+history = 100000
+
 [mouse]
 hide_when_typing = true
 
 [font]
 size = 8
 
-normal = { family = "JetBrains Mono Nerd Font", style = "regular" }
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Medium Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[terminal]
+oxc52 = "CopyPaste"
+
+[keyboard]
+bindings = [
+        { key = "M", mods = "Control|Shift", action = "ToggleMaximized" },
+        { key = "Q", mods = "Control|Shift", action = "Quit" },
+        { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
+]
+
 
 # Colors (Gruvbox dark)
 
