@@ -31,7 +31,7 @@ family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [terminal]
-oxc52 = "CopyPaste"
+osc52 = "CopyPaste"
 
 [keyboard]
 bindings = [
