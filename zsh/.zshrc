@@ -24,7 +24,8 @@ function y() {
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-
+export EDITOR="nvim"
+export VISUAL=$EDITOR
 
 # eza integration
 alias ls='eza --icons=always -a --group-directories-first'
