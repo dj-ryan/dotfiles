@@ -100,6 +100,11 @@ return {
       },
     }
 
+    -- Disable pylsp entirely at the lspconfig level
+    require('lspconfig').pylsp.setup({
+      autostart = false,
+    })
+
     local capabilities = require('blink.cmp').get_lsp_capabilities()
 
     -- Enable the following language servers
@@ -124,6 +129,8 @@ return {
       -- But for many setups, the LSP (`ts_ls`) will work just fine
       -- ts_ls = {},
       --
+
+      -- pyright = {},
 
       lua_ls = {
         -- cmd = { ... },
@@ -150,6 +157,9 @@ return {
       ensure_installed = {},
       automatic_installation = false,
       handlers = {
+        -- Explicitly disable pylsp
+        pylsp = function() end,
+        
         function(server_name)
           local server = servers[server_name] or {}
           -- This handles overriding only values explicitly passed
