@@ -60,6 +60,10 @@ vim.o.scrolloff = 10
 -- use two spaces for a tab
 -- vim.o.tabstop = 2
 -- vim.o.shiftwidth = 2
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldenable = false -- start unfolded
+vim.o.foldlevel = 99     -- keep most folds open
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
