@@ -16,19 +16,19 @@ size = 8
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
-style = "Heavy"
+style = "SemiBold"
 
 [font.bold_italic]
 family = "JetBrainsMono Nerd Font"
-style = "Heavy Italic"
+style = "SemiBold Italic"
 
 [font.italic]
 family = "JetBrainsMono Nerd Font"
-style = "Medium Italic"
+style = "Light Italic"
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
-style = "Regular"
+style = "Light"
 
 [terminal]
 oxc52 = "CopyPaste"
