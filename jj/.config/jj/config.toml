@@ -15,3 +15,25 @@ diff-args=["--side-by-side", "$left", "$right", "--width=$width"]
 delta.diff-expected-exit-codes=[0,1]
 # [ui.diff]
 # format = "git"
+
+
+[template-aliases]
+'format_short_signature(signature)' = '''
+if("com
+co.uk
+co.jp".lines().any(|tld| signature.email().domain() == stringify("amazon." ++ tld)),
+  if(!signature.email().local().match(regex:"^[a-zA-Z]+$"),
+    "(BOT: " ++ coalesce(signature.name(), signature.email().local()) ++ ")",
+    hyperlink(
+      "https://code.amazon.com/users/" ++
+        signature.email().local() ++
+        "/activity",
+      "@") ++
+      hyperlink(
+        "https://phonetool.amazon.com/users/" ++ signature.email().local(),
+        signature.email().local())),
+  if("amazon
+aws".lines().any(|pat| signature.email().domain().contains(pat)),
+    "(BOT: " ++ coalesce(signature.name(), signature.email().local()) ++ ")",
+    coalesce(signature.email().local(), "(empty)")))
+'''
