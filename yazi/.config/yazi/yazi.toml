@@ -1,3 +1,20 @@
 [mgr]
 show_hidden = true
 sort_by = "extension"
+
+# Mime detection uses file(1). On Windows, point YAZI_FILE_ONE at Git's
+# usr\bin\file.exe or every file falls through to the fallback rule.
+
+[opener]
+edit = [
+	{ run = "nvim %s", desc = "nvim", block = true },
+]
+
+[open]
+# Matched before the defaults; catches code/config files that file(1)
+# reports as application/* or octet-stream instead of text/*.
+prepend_rules = [
+	{ url = "*.{toml,yaml,yml,json,jsonc,lua,conf,ini,cfg,md,txt,log,csv}", use = [ "edit", "reveal" ] },
+	{ url = "*.{sh,zsh,bash,ps1,psm1,psd1,py,rs,go,js,ts,c,h,cpp,java,nix}", use = [ "edit", "reveal" ] },
+	{ mime = "application/{x-,}{wine-extension-ini,shellscript,toml,yaml,xml}", use = [ "edit", "reveal" ] },
+]
